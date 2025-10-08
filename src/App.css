@@ -1,0 +1,602 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* App Container */
+.App {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.App-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.App-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  padding: 12px 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  color: white;
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Main Content Layout */
+.App-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Form Section */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Profile Form Styles */
+.profile-form,
+.addons-selector {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-form h2,
+.addons-selector h2 {
+  color: #4a5568;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: #718096;
+  font-size: 12px;
+}
+
+/* Add-ons Selector Styles */
+.addons-selector p {
+  color: #718096;
+  margin-bottom: 20px;
+}
+
+.addon-item {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.addon-item:hover {
+  border-color: #cbd5e0;
+  background-color: #f7fafc;
+}
+
+.addon-item label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.addon-item input[type="checkbox"] {
+  width: auto;
+  margin-top: 2px;
+  transform: scale(1.2);
+}
+
+.addon-title {
+  font-weight: 600;
+  color: #2d3748;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.addon-item small {
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Preview Section */
+.preview-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.preview-header h2 {
+  color: #4a5568;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Copy Button Styles */
+.copy-button {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copy-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4);
+}
+
+.copy-button:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.copy-button.copied {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+}
+
+/* Markdown Preview Styles */
+.markdown-preview {
+  height: 500px;
+  overflow-y: auto;
+}
+
+.preview-content {
+  padding: 25px;
+}
+
+.preview-content pre {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #2d3748;
+}
+
+/* Rendered Markdown Styles */
+.rendered-markdown {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.rendered-markdown h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0 15px 0;
+  color: #2d3748;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.rendered-markdown h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 18px 0 12px 0;
+  color: #4a5568;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.rendered-markdown h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 16px 0 10px 0;
+  color: #4a5568;
+}
+
+.rendered-markdown p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.rendered-markdown strong {
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.rendered-markdown img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rendered-markdown a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.rendered-markdown a:hover {
+  text-decoration: underline;
+  color: #5a67d8;
+}
+
+.rendered-markdown br {
+  margin: 5px 0;
+}
+
+.empty-preview {
+  text-align: center;
+  padding: 60px 20px;
+  color: #718096;
+}
+
+.empty-preview p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  .App-header h1 {
+    font-size: 2rem;
+  }
+
+  .App-header p {
+    font-size: 1rem;
+  }
+
+  .App-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .profile-form,
+  .addons-selector {
+    padding: 20px;
+  }
+
+  .preview-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .copy-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .markdown-preview {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 5px;
+  }
+
+  .App-header {
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+
+  .App-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-form,
+  .addons-selector {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+  }
+
+  .addon-item {
+    padding: 12px;
+  }
+
+  .preview-content {
+    padding: 15px;
+  }
+
+  .preview-content pre {
+    padding: 15px;
+    font-size: 12px;
+  }
+}
+
+/* Custom Scrollbar */
+.markdown-preview::-webkit-scrollbar {
+  width: 8px;
+}
+
+.markdown-preview::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.markdown-preview::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.markdown-preview::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Animation for form interactions */
+.form-group input,
+.form-group textarea,
+.addon-item {
+  transition: all 0.3s ease;
+}
+
+.addon-item input[type="checkbox"]:checked + .addon-title {
+  color: #667eea;
+}
+
+/* Loading and Success States */
+.copy-button.copied {
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Dark Theme Styles */
+.App.dark-theme {
+  background-color: #1a1a1a;
+}
+
+.App.dark-theme body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.App.dark-theme .App-header {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+}
+
+.App.dark-theme .profile-form,
+.App.dark-theme .addons-selector,
+.App.dark-theme .preview-section {
+  background: #2d3748;
+  color: #e0e0e0;
+  border: 1px solid #4a5568;
+}
+
+.App.dark-theme .profile-form h2,
+.App.dark-theme .addons-selector h2,
+.App.dark-theme .preview-header h2 {
+  color: #f7fafc;
+  border-bottom-color: #4a5568;
+}
+
+.App.dark-theme .form-group label {
+  color: #e2e8f0;
+}
+
+.App.dark-theme .form-group input,
+.App.dark-theme .form-group textarea {
+  background: #1a202c;
+  border-color: #4a5568;
+  color: #e0e0e0;
+}
+
+.App.dark-theme .form-group input:focus,
+.App.dark-theme .form-group textarea:focus {
+  border-color: #667eea;
+  background: #2d3748;
+}
+
+.App.dark-theme .form-group small {
+  color: #a0aec0;
+}
+
+.App.dark-theme .addon-item {
+  background: #1a202c;
+  border-color: #4a5568;
+}
+
+.App.dark-theme .addon-item:hover {
+  border-color: #667eea;
+  background: #2d3748;
+}
+
+.App.dark-theme .addon-title {
+  color: #f7fafc;
+}
+
+.App.dark-theme .addon-item small {
+  color: #a0aec0;
+}
+
+.App.dark-theme .preview-header {
+  background: #1a202c;
+  border-bottom-color: #4a5568;
+}
+
+.App.dark-theme .markdown-preview {
+  background: #1a202c;
+}
+
+.App.dark-theme .preview-content {
+  background: #1a202c;
+}
+
+.App.dark-theme .rendered-markdown {
+  color: #e0e0e0;
+}
+
+.App.dark-theme .rendered-markdown h1,
+.App.dark-theme .rendered-markdown h2,
+.App.dark-theme .rendered-markdown h3 {
+  color: #f7fafc;
+  border-bottom-color: #4a5568;
+}
+
+.App.dark-theme .rendered-markdown strong {
+  color: #f7fafc;
+}
+
+.App.dark-theme .rendered-markdown a {
+  color: #90cdf4;
+}
+
+.App.dark-theme .rendered-markdown a:hover {
+  color: #63b3ed;
+}
+
+.App.dark-theme .empty-preview {
+  color: #a0aec0;
+}
+
+.App.dark-theme .copy-button {
+  background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+}
+
+.App.dark-theme .copy-button:hover:not(:disabled) {
+  box-shadow: 0 4px 12px rgba(43, 108, 176, 0.4);
+}
+
+.App.dark-theme .copy-button:disabled {
+  background: #4a5568;
+}
+
+/* Dark theme responsive adjustments */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .theme-toggle {
+    align-self: center;
+  }
+}
