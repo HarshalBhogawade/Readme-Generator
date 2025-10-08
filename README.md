@@ -2,7 +2,7 @@
 
 A simple and beginner-friendly React application built with Vite that helps you create awesome GitHub profile READMEs in minutes!
 
-🌐 **Live Demo**: [https://yourusername.github.io/github-readme-generator/](https://yourusername.github.io/github-readme-generator/)
+🌐 **Live Demo**: [https://harshalbhogawade.github.io/Readme-Generator/](https://harshalbhogawade.github.io/Readme-Generator/)
 
 ## Features
 
@@ -78,7 +78,7 @@ npm run build
    npm run deploy
    ```
 
-Your app will be available at: `https://yourusername.github.io/github-readme-generator/`
+Your app will be available at: `https://harshalbhogawade.github.io/Readme-Generator/`
 
 ## How to Use
 
